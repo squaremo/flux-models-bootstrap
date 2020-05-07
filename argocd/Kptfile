@@ -5,7 +5,7 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 8a20f048efdfa5fa0b962e53737602c8d3ce2c17
+        commit: 78c0b3a018b0611202c2edab842ba1d9920bfabc
         repo: https://github.com/squaremo/flux-models
         directory: /argocd
         ref: master
