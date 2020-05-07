@@ -1,0 +1,26 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: flux-readonly
+upstream:
+    type: git
+    git:
+        commit: afd2649e0aef778acd214e8035c51ffe07ff840b
+        repo: https://github.com/squaremo/flux-models
+        directory: /flux-readonly
+        ref: master
+openAPI:
+    definitions:
+        io.k8s.cli.setters.git-url:
+            x-k8s-cli:
+                setter:
+                    name: git-url
+                    value: git@github.com:fluxcd/flux-get-started
+        io.k8s.cli.substitutions.git-url-arg:
+            x-k8s-cli:
+                substitution:
+                    name: git-url-arg
+                    pattern: --git-url=GIT_URL
+                    values:
+                      - marker: GIT_URL
+                        ref: '#/definitions/io.k8s.cli.setters.git-url'
