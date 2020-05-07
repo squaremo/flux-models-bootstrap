@@ -5,7 +5,7 @@ metadata:
 upstream:
     type: git
     git:
-        commit: 47f61e7a51fc8c5997d9d8e3f349c34eb556c471
+        commit: 8b5569dc1e15b0b2de7979d801f9231f4523648c
         repo: https://github.com/squaremo/flux-models
         directory: /flux-readonly
         ref: master
